@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f3ed" />
+    <meta name="description" content="CarbonPilot explores demand-aware scheduling for flexible AI workloads using Maharashtra grid data." />
+    <title>CarbonPilot — Demand-aware compute scheduling</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="region.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="CarbonPilot home">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span>carbon<span class="brand-light">pilot</span></span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#method">Method</a>
+          <a href="#simulator">Simulator</a>
+          <a href="#about">About</a>
+        </nav>
+        <a class="top-cta" href="#simulator">Explore the model <span aria-hidden="true">↗</span></a>
+      </header>
+
+      <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero-copy reveal">
+            <div class="eyebrow"><span class="live-dot"></span> A NEW RHYTHM FOR COMPUTE <span class="eyebrow-line"></span> 01 / 03</div>
+              <h1 id="hero-title">Give every<br />compute cycle<br /><em>a lighter hour.</em></h1>
+            <p class="hero-description">Starting with Thane, Maharashtra. CarbonPilot explores when flexible AI workloads could shift toward cleaner hours on the state grid—without losing sight of deadlines.</p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#simulator">See the shift <span>↓</span></a>
+              <a class="text-link" href="#method">How it works <span>↗</span></a>
+            </div>
+            <div class="hero-note"><span class="note-rule"></span><span>DESIGNED FOR THE WORK THAT CAN WAIT.</span></div>
+          </div>
+
+          <div class="hero-art reveal" aria-label="Animated visualization of compute workloads moving toward cleaner energy">
+            <div class="art-stamp">GRID SIGNAL<br /><strong>LIVE STUDY / 01</strong></div>
+            <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="orbit orbit-three"></div>
+            <div class="sun-core"><span>LOWER<br />GRID<br /><b>STRESS</b></span></div>
+            <div class="art-label label-top">DEMAND<br />PROFILE <b>↗</b></div>
+            <div class="art-label label-bottom">FLEXIBLE<br />WORKLOADS <b>↗</b></div>
+            <div class="signal signal-one"></div><div class="signal signal-two"></div><div class="signal signal-three"></div>
+            <div class="art-caption">SHIFT THE JOB.<br /><strong>NOT THE OUTCOME.</strong></div>
+            <div class="art-index">24H <span>·</span> 7D <span>·</span> 30D</div>
+          </div>
+          <div class="hero-bottom"><span>DEMAND-AWARE COMPUTE SCHEDULING</span><span>BUILT FOR A FLEXIBLE GRID <b>↓</b></span></div>
+        </section>
+
+        <section class="manifesto reveal" id="method">
+          <div class="section-kicker"><span>THE IDEA</span><span>01 — 02</span></div>
+          <div class="manifesto-content">
+            <h2>Some jobs have a deadline.<br /><span>They don’t have a moment.</span></h2>
+            <div class="manifesto-aside"><p>Training runs, batch analytics, and other flexible workloads can move across a safe time window. CarbonPilot explores how to place them when Maharashtra demand is expected to be lower—without losing sight of deadlines or compute limits.</p><a class="arrow-link" href="#simulator">Try the scheduling study <span>↘</span></a></div>
+          </div>
+          <div class="principles">
+            <article><span class="principle-index">01</span><div class="principle-icon icon-wave">≈</div><h3>Read the grid</h3><p>Use recent measured Maharashtra demand to estimate the next day’s load pattern.</p></article>
+            <article><span class="principle-index">02</span><div class="principle-icon icon-time">◷</div><h3>Respect the window</h3><p>Every job carries its own deadline, duration, and flexibility constraints.</p></article>
+            <article><span class="principle-index">03</span><div class="principle-icon icon-route">↗</div><h3>Show the trade-off</h3><p>See the model’s grid-stress objective, job delays, and chosen schedule.</p></article>
+          </div>
+        </section>
+
+        <section class="simulator-section" id="simulator">
+          <div class="sim-intro reveal">
+            <div class="section-kicker light-kicker"><span>THE SCHEDULING STUDY</span><span>02 — 03</span></div>
+            <div class="sim-title-row"><div><p class="eyebrow"><span class="live-dot"></span> MAHARASHTRA LIVE DEMAND / OPTIMIZED SCHEDULE</p><h2>Find the<br /><em>lighter window.</em></h2></div><p class="sim-intro-copy">Connected to Maharashtra state demand data. The scheduler forecasts the next day from recent demand patterns and places flexible jobs where the grid is expected to be under less stress.</p></div>
+          </div>
+          <div class="simulator-card reveal">
+            <div class="sim-toolbar"><div><span class="toolbar-label">STUDY LOCATION</span><strong>Thane · Maharashtra state grid <span class="scenario-pill">LOAD PROXY</span></strong></div><div class="simulation-status" id="feed-status"><span class="status-dot"></span> CONNECTING TO GRID</div></div>
+            <div class="sim-body">
+              <div class="controls-panel">
+                <div class="panel-heading"><span>01 / GRID CONDITIONS</span><span class="tiny-spark">⌁</span></div>
+                <label class="control-label" for="priority">Grid-stress avoidance <output id="priority-output">72%</output></label>
+                <input id="priority" type="range" min="0" max="100" value="72" />
+                <div class="range-scale"><span>RUN SOONER</span><span>AVOID PEAKS</span></div>
+                <label class="control-label control-label-spaced" for="deadline">Maximum job delay <output id="deadline-output">12 hours</output></label>
+                <input id="deadline" type="range" min="2" max="24" value="12" />
+                <div class="range-scale"><span>2 HOURS</span><span>24 HOURS</span></div>
+                <div class="region-select-wrap"><label>DATA FEED</label><div class="feed-name">Maharashtra demand · MW</div><span class="select-chevron">↗</span></div>
+                <button class="button button-lime run-button" id="run-simulation"><span class="run-icon">↻</span> Refresh &amp; schedule <span>↗</span></button>
+                <p class="data-disclaimer">Demand is measured at state level. This is a grid-stress proxy, not carbon intensity.</p>
+              </div>
+              <div class="results-panel">
+                <div class="result-topline"><span>02 / LIVE DATA + FORECAST</span><span class="updated-label" id="updated-label">WAITING FOR FEED</span></div>
+                <div class="metric-row">
+                  <div class="metric metric-primary"><span>MAHARASHTRA DEMAND NOW</span><div><strong id="current-demand">—</strong><small>GW</small></div><p id="demand-timestamp">Awaiting measured reading</p></div>
+                  <div class="metric"><span>MODEL SCORE REDUCTION</span><div><strong id="stress-reduction">—</strong><small>%</small></div><p>vs. immediate-run plan</p></div>
+                  <div class="metric"><span>AVERAGE JOB DELAY</span><div><strong id="average-delay">—</strong><small>hrs</small></div><p>Flexible workloads only</p></div>
+                </div>
+                <div class="chart-heading"><span>MAHARASHTRA DEMAND FORECAST &amp; COMPUTE</span><span class="chart-legend"><i></i> OBSERVED / FORECAST MW <i class="legend-lime"></i> SCHEDULED JOBS</span></div>
+                <div class="chart-wrap"><div class="chart-y-labels"><span>PEAK</span><span>MED</span><span>LOW</span></div><div class="chart" id="chart" role="img" aria-label="Maharashtra observed demand and seasonal forecast with optimized workload schedule"><div class="chart-gridline grid-1"></div><div class="chart-gridline grid-2"></div><div class="chart-gridline grid-3"></div><svg class="chart-svg" viewBox="0 0 700 180" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="areaFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#c6f36b" stop-opacity=".28"/><stop offset="1" stop-color="#c6f36b" stop-opacity="0"/></linearGradient></defs><path class="area-path" id="demand-area" d=""/><path class="line-path" id="demand-line" d=""/></svg><div class="job-bars" id="job-bars"></div><div class="chart-x-labels"><span>NOW</span><span>+4H</span><span>+8H</span><span>+12H</span><span>+16H</span><span>+20H</span><span>+24H</span></div></div></div>
+                <div class="job-list-heading"><span>OPTIMIZED WORKLOAD QUEUE</span><span>3 FLEXIBLE BATCH JOBS</span></div>
+                <div class="job-list" id="job-list"><div class="job-row"><span class="job-symbol symbol-lime">◈</span><span class="job-name">Waiting for live data<small>Refresh the Maharashtra grid feed</small></span><span class="job-time">—</span><span class="job-state state-fixed">PENDING</span></div></div>
+              </div>
+            </div>
+            <div class="sim-foot"><span><i class="foot-spark">✳</i> STATE-LEVEL MEASURED DEMAND · THANE LOCATION PROXY · NO CO₂ CLAIM.</span><span>DEMAND FORECAST + DYNAMIC SCHEDULE SEARCH</span></div>
+          </div>
+          <div class="sim-bottom-note"><span>BUILT TO MAKE THE TRADE-OFF VISIBLE.</span><span>YOUR JOBS. A BETTER WINDOW. <b>↗</b></span></div>
+        </section>
+
+        <section class="closing" id="about">
+          <div class="closing-orb" aria-hidden="true"></div><div class="section-kicker"><span>THE NEXT CYCLE</span><span>03 — 03</span></div>
+          <div class="closing-content"><p class="eyebrow">A RESEARCH PROTOTYPE FOR A MORE FLEXIBLE GRID</p><h2>Compute can<br />learn <em>when.</em></h2><p>This prototype explores one question: what changes when we schedule work around the grid, instead of asking the grid to follow every workload?</p><a class="button button-dark" href="#simulator">Run another scenario <span>↗</span></a></div>
+          <footer class="footer"><a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>carbon<span class="brand-light">pilot</span></span></a><span>AN INDEPENDENT AI SYSTEMS STUDY</span><span>© 2026 · CONCEPT / 001</span></footer>
+        </section>
+      </main>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
