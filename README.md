@@ -2,6 +2,8 @@
 
 An animated, responsive concept website and interactive scheduling study for carbon-aware AI compute, scoped to Thane, Maharashtra. Built with plain HTML, CSS, and JavaScript: no API keys, paid services, framework, or build step.
 
+## Live Demo: https://carbonpilot-nishant.netlify.app/
+
 ## Run it locally
 
 1. Download or clone this folder.
